@@ -13,220 +13,232 @@
   <title>Menu</title>
 </head>
 
-<body>
-  <header class="header container">
-    <a class="header__logo-link logo" href="./index.html">
-      <img src="./assets/svg/logo-icon.svg" alt="Логотип Coffee House" width="100" height="60">
-    </a>
-    <nav class="header__navigation navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="./index.html#favorite-coffee">Favorite coffee</a>
+<body class="page__body">
+  <div class="body-wrapper">
+    <header class="header container">
+      <a class="header__logo-link logo" href="./index.html">
+        <img src="./assets/svg/logo-icon.svg" alt="Логотип Coffee House" width="100" height="60">
+      </a>
+      <div class="header__navigation-wrapper" id="menu">
+        <nav class="header__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html#favorite-coffee">Favorite coffee</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html#about">About</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html#mobile-app">Mobile app</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#contacts">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__menu-link menu-link menu-link--current">
+          <span class="menu-link__text">Menu</span>
+          <svg class="menu-link__icon" width="20" height="20" aria-hidden="true" focusable="false">
+            <use xlink:href="./assets/svg/stack.svg#coffee-cup-icon"></use>
+          </svg>
+        </a>
+      </div>
+      <button class="header__hamburger hamburger" id="hamburger__button">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </header>
+    <main class="menu container">
+      <h1 class="visually-hidden">Menu</h1>
+      <p class="menu__text">Behind each of our cups hides an <span class="menu__text-accent">amazing surprise</span></p>
+      <ul class="menu__navigation-list">
+        <li class="menu__navigation-item">
+          <button class="menu__navigation-button menu__navigation-button--current" type="button">
+            <span class="menu__navigation-icon-wrapper">
+              <img class="menu__navigation-icon" src="./assets/menu/general/menu-coffee-icon@1x.png"
+                alt="Иконка чашки кофе">
+            </span>
+            Coffee
+          </button>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./index.html#about">About</a>
+        <li class="menu__navigation-item">
+          <button class="menu__navigation-button" type="button">
+            <span class="menu__navigation-icon-wrapper">
+              <img class="menu__navigation-icon" src="./assets/menu/general/menu-kettle-icon@1x.png"
+                alt="Иконка чайника">
+            </span>
+            Tea
+          </button>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./index.html#mobile-app">Mobile app</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#contacts">Contact us</a>
-        </li>
-      </ul>
-    </nav>
-    <a class="header__menu-link menu-link menu-link--current">
-      <span class="menu-link__text">Menu</span>
-      <svg class="menu-link__icon" width="20" height="20" aria-hidden="true" focusable="false">
-        <use xlink:href="./assets/svg/stack.svg#coffee-cup-icon"></use>
-      </svg>
-    </a>
-  </header>
-  <main class="menu container">
-    <h1 class="visually-hidden">Menu</h1>
-    <p class="menu__text">Behind each of our cups hides an <span class="menu__text-accent">amazing surprise</span></p>
-    <ul class="menu__navigation-list">
-      <li class="menu__navigation-item">
-        <button class="menu__navigation-button menu__navigation-button--current" type="button">
-          <span class="menu__navigation-icon-wrapper">
-            <img class="menu__navigation-icon" src="./assets/menu/general/menu-coffee-icon@1x.png"
-              alt="Иконка чашки кофе">
-          </span>
-          Coffee
-        </button>
-      </li>
-      <li class="menu__navigation-item">
-        <button class="menu__navigation-button" type="button">
-          <span class="menu__navigation-icon-wrapper">
-            <img class="menu__navigation-icon" src="./assets/menu/general/menu-kettle-icon@1x.png" alt="Иконка чайника">
-          </span>
-          Tea
-        </button>
-      </li>
-      <li class="menu__navigation-item">
-        <button class="menu__navigation-button" type="button">
-          <span class="menu__navigation-icon-wrapper">
-            <img class="menu__navigation-icon" src="./assets/menu/general/menu-dessert-icon@1x.png"
-              alt="Иконка куска торта">
-          </span>
-          Dessert
-        </button>
-      </li>
-    </ul>
-    <section class="menu__products">
-      <ul class="menu__products-list">
-        <li class="menu__card card">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-1@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Irish coffee</h2>
-            <p class="card__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-            <p class="card__price">$<span class="card__price-count">7.00</span></p>
-          </div>
-        </li>
-        <li class="menu__card card">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-2@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Kahlua coffee</h2>
-            <p class="card__text">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-            <p class="card__price">$<span class="card__price-count">7.00</span></p>
-          </div>
-        </li>
-        <li class="menu__card card">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-3@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Honey raf</h2>
-            <p class="card__text">Espresso with frothed milk, cream and aromatic honey</p>
-            <p class="card__price">$<span class="card__price-count">5.50</span></p>
-          </div>
-        </li>
-        <li class="menu__card card">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-4@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Ice cappuccino</h2>
-            <p class="card__text">Cappuccino with soft thick foam in summer version with ice</p>
-            <p class="card__price">$<span class="card__price-count">5.00</span></p>
-          </div>
-        </li>
-        <li class="menu__card card card--hidden">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-5@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Espresso</h2>
-            <p class="card__text">Classic black coffee</p>
-            <p class="card__price">$<span class="card__price-count">4.50</span></p>
-          </div>
-        </li>
-        <li class="menu__card card card--hidden">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-6@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Latte</h2>
-            <p class="card__text">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-            <p class="card__price">$<span class="card__price-count">5.50</span></p>
-          </div>
-        </li>
-        <li class="menu__card card card--hidden">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-7@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Latte macchiato</h2>
-            <p class="card__text">Espresso with frothed milk and chocolate</p>
-            <p class="card__price">$<span class="card__price-count">5.50</span></p>
-          </div>
-        </li>
-        <li class="menu__card card card--hidden">
-          <div class="card__img-wrapper">
-            <img class="card__img" src="./assets/menu/coffee/coffee-8@1x.jpg" alt="">
-          </div>
-          <div class="card__meta">
-            <h2 class="card__title">Coffee with cognac</h2>
-            <p class="card__text">Fragrant black coffee with cognac and whipped cream</p>
-            <p class="card__price">$<span class="card__price-count">6.50</span></p>
-          </div>
+        <li class="menu__navigation-item">
+          <button class="menu__navigation-button" type="button">
+            <span class="menu__navigation-icon-wrapper">
+              <img class="menu__navigation-icon" src="./assets/menu/general/menu-dessert-icon@1x.png"
+                alt="Иконка куска торта">
+            </span>
+            Dessert
+          </button>
         </li>
       </ul>
-    </section>
-    <button class="menu__button">
-      <svg class="menu__button-icon" width="24" height="24" aria-hidden="true" focusable="false">
-        <use xlink:href="./assets/svg/stack.svg#menu-refresh-button-icon"></use>
-      </svg>
-    </button>
-  </main>
-  <footer class="footer container">
-    <section class="contacts" id="contacts">
-      <div class="contacts__social-media">
-        <p class="contacts__text">Sip, Savor, Smile. <span class="contacts__text-accent">It’s coffee time!</span></p>
-        <ul class="contacts__social-list">
-          <li class="contacts__social-item">
-            <span class="visually-hidden">Go to Twitter.</span>
-            <a class="contacts__social-link" href="#">
-              <svg class="contacts__social-twitter-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                <use xlink:href="./assets/svg/stack.svg#contacts-twitter-icon"></use>
-              </svg>
-            </a>
+      <section class="menu__products">
+        <ul class="menu__products-list">
+          <li class="menu__card card">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-1@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Irish coffee</h2>
+              <p class="card__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+              <p class="card__price">$<span class="card__price-count">7.00</span></p>
+            </div>
           </li>
-          <li class="contacts__social-item">
-            <span class="visually-hidden">Go to Instagram.</span>
-            <a class="contacts__social-link" href="#">
-              <svg class="contacts__social-instagram-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                <use xlink:href="./assets/svg/stack.svg#contacts-instagram-icon"></use>
-              </svg>
-            </a>
+          <li class="menu__card card">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-2@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Kahlua coffee</h2>
+              <p class="card__text">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+              <p class="card__price">$<span class="card__price-count">7.00</span></p>
+            </div>
           </li>
-          <li class="contacts__social-item">
-            <span class="visually-hidden">Go to Facebook.</span>
-            <a class="contacts__social-link" href="#">
-              <svg class="contacts__social-facebook-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                <use xlink:href="./assets/svg/stack.svg#contacts-facebook-icon"></use>
-              </svg>
-            </a>
+          <li class="menu__card card">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-3@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Honey raf</h2>
+              <p class="card__text">Espresso with frothed milk, cream and aromatic honey</p>
+              <p class="card__price">$<span class="card__price-count">5.50</span></p>
+            </div>
+          </li>
+          <li class="menu__card card">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-4@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Ice cappuccino</h2>
+              <p class="card__text">Cappuccino with soft thick foam in summer version with ice</p>
+              <p class="card__price">$<span class="card__price-count">5.00</span></p>
+            </div>
+          </li>
+          <li class="menu__card card card--hidden">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-5@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Espresso</h2>
+              <p class="card__text">Classic black coffee</p>
+              <p class="card__price">$<span class="card__price-count">4.50</span></p>
+            </div>
+          </li>
+          <li class="menu__card card card--hidden">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-6@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Latte</h2>
+              <p class="card__text">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+              <p class="card__price">$<span class="card__price-count">5.50</span></p>
+            </div>
+          </li>
+          <li class="menu__card card card--hidden">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-7@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Latte macchiato</h2>
+              <p class="card__text">Espresso with frothed milk and chocolate</p>
+              <p class="card__price">$<span class="card__price-count">5.50</span></p>
+            </div>
+          </li>
+          <li class="menu__card card card--hidden">
+            <div class="card__img-wrapper">
+              <img class="card__img" src="./assets/menu/coffee/coffee-8@1x.jpg" alt="">
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Coffee with cognac</h2>
+              <p class="card__text">Fragrant black coffee with cognac and whipped cream</p>
+              <p class="card__price">$<span class="card__price-count">6.50</span></p>
+            </div>
           </li>
         </ul>
-      </div>
-      <div class="contacts__meta">
-        <h2 class="contacts__title">Contact us</h2>
-        <ul class="contacts__meta-list">
-          <li class="contacts__meta-item">
-            <address class="contacts__address">
-              <a class="contacts__address-map-link"
-                href="https://www.google.com/maps/place/8558+Green+Rd,+Pinon+Hills,+CA+92372,+%D0%A1%D0%A8%D0%90/@33.9943673,-118.4198132,17z/data=!4m2!3m1!1s0x80c31419692917f7:0xbaebe5acc965da60"
-                target="_blank">
-                <svg class="contacts__pin-alt-icon" width="20" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="./assets/svg/stack.svg#contacts-pin-alt-icon"></use>
+      </section>
+      <button class="menu__button">
+        <svg class="menu__button-icon" width="24" height="24" aria-hidden="true" focusable="false">
+          <use xlink:href="./assets/svg/stack.svg#menu-refresh-button-icon"></use>
+        </svg>
+      </button>
+    </main>
+    <footer class="footer container">
+      <section class="contacts" id="contacts">
+        <div class="contacts__social-media">
+          <p class="contacts__text">Sip, Savor, Smile. <span class="contacts__text-accent">It’s coffee time!</span></p>
+          <ul class="contacts__social-list">
+            <li class="contacts__social-item">
+              <span class="visually-hidden">Go to Twitter.</span>
+              <a class="contacts__social-link" href="#">
+                <svg class="contacts__social-twitter-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="./assets/svg/stack.svg#contacts-twitter-icon"></use>
                 </svg>
-                <span>8558 Green Rd., LA</span>
               </a>
-            </address>
-          </li>
-          <li class="contacts__meta-item">
-            <a class="contacts__phone-link" href="tel:+1603555-0123">
-              <svg class="contacts__phone-icon" width="20" height="20" aria-hidden="true" focusable="false">
-                <use xlink:href="./assets/svg/stack.svg#contacts-phone-icon"></use>
+            </li>
+            <li class="contacts__social-item">
+              <span class="visually-hidden">Go to Instagram.</span>
+              <a class="contacts__social-link" href="#">
+                <svg class="contacts__social-instagram-icon" width="24" height="24" aria-hidden="true"
+                  focusable="false">
+                  <use xlink:href="./assets/svg/stack.svg#contacts-instagram-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="contacts__social-item">
+              <span class="visually-hidden">Go to Facebook.</span>
+              <a class="contacts__social-link" href="#">
+                <svg class="contacts__social-facebook-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="./assets/svg/stack.svg#contacts-facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__meta">
+          <h2 class="contacts__title">Contact us</h2>
+          <ul class="contacts__meta-list">
+            <li class="contacts__meta-item">
+              <address class="contacts__address">
+                <a class="contacts__address-map-link"
+                  href="https://www.google.com/maps/place/8558+Green+Rd,+Pinon+Hills,+CA+92372,+%D0%A1%D0%A8%D0%90/@33.9943673,-118.4198132,17z/data=!4m2!3m1!1s0x80c31419692917f7:0xbaebe5acc965da60"
+                  target="_blank">
+                  <svg class="contacts__pin-alt-icon" width="20" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/svg/stack.svg#contacts-pin-alt-icon"></use>
+                  </svg>
+                  <span>8558 Green Rd., LA</span>
+                </a>
+              </address>
+            </li>
+            <li class="contacts__meta-item">
+              <a class="contacts__phone-link" href="tel:+1603555-0123">
+                <svg class="contacts__phone-icon" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use xlink:href="./assets/svg/stack.svg#contacts-phone-icon"></use>
+                </svg>
+                <span>+1 (603) 555-0123</span>
+              </a>
+            </li>
+            <li class="contacts__meta-item">
+              <svg class="contacts__clock-icon" width="20" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="./assets/svg/stack.svg#contacts-clock-icon"></use>
               </svg>
-              <span>+1 (603) 555-0123</span>
-            </a>
-          </li>
-          <li class="contacts__meta-item">
-            <svg class="contacts__clock-icon" width="20" height="20" aria-hidden="true" focusable="false">
-              <use xlink:href="./assets/svg/stack.svg#contacts-clock-icon"></use>
-            </svg>
-            <p class="contacts__schedule">Mon-Sat: <time datetime="09:00">9:00 AM</time> – <time datetime="23:00">23:00
-                PM</time></p>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </footer>
+              <p class="contacts__schedule">Mon-Sat: <time datetime="09:00">9:00 AM</time> – <time
+                  datetime="23:00">23:00
+                  PM</time></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
