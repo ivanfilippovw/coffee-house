@@ -388,14 +388,11 @@ a {
   overflow: hidden;
   width: 100%;
   max-width: 660px;
-  /* height: 590px; */
   border-radius: 20px;
 }
 
 .about__gallery-img {
   object-fit: cover;
-  margin-right: auto;
-  margin-left: auto;
   transform: scale(1.1);
   transition: transform .3s ease-out;
 }
@@ -665,7 +662,8 @@ a {
 }
 
 .menu__text {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin-right: auto;
   margin-bottom: 40px;
   margin-left: auto;
@@ -734,15 +732,16 @@ a {
 }
 
 .menu__products-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 310px;
+  width: 100%;
+  max-width: 310px;
   min-height: 505px;
   overflow: hidden;
   border: 1px solid var(--border-light);
@@ -789,6 +788,11 @@ a {
   line-height: 1.25;
 }
 
+.menu__button {
+  display: none;
+}
+
+/* tablet 1280 */
 @media (max-width: 1280px) {
   .mobile-app {
     flex-direction: column;
@@ -800,6 +804,11 @@ a {
     flex-direction: column;
     align-items: center;
     row-gap: 100px;
+  }
+
+  .menu__products-list {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 }
 
@@ -853,6 +862,11 @@ a {
     max-width: none;
   }
 
+  .about__gallery-img {
+    width: 100%;
+    transform: scale(1.05);
+  }
+
   .mobile-app__content-wrapper {
     align-self: start;
     max-width: initial;
@@ -862,5 +876,43 @@ a {
     align-items: start;
     padding-right: 60px;
     padding-left: 60px;
+  }
+
+  .menu__products-list {
+    margin-bottom: 40px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .card--hidden {
+    display: none;
+  }
+
+  .menu__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--background-body);
+    border: 1px solid var(--border-dark);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color .3s ease-out, stroke .3s ease-out;
+  }
+
+  .menu__button-icon {
+    stroke: var(--text-dark);
+  }
+
+  .menu__button:hover {
+    background-color: var(--background-container);
+  }
+
+  .menu__button:hover .menu__button-icon {
+    stroke: var(--background-body);
   }
 }

@@ -74,4 +74,8 @@
     <path d="M25.2733 24.2007L20.0617 19.1195L4.68164 34.1166C5.25384 34.7031 6.18695 34.7737 7.24807 34.1873L25.2733 24.2007Z" fill=""></path>
     <path d="M25.2733 12.1876L7.24807 2.20103C6.18695 1.62058 5.25384 1.69125 4.68164 2.27772L20.0617 17.2688L25.2733 12.1876Z" fill=""></path>
   </svg>
+  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu-refresh-button-icon">
+    <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
 </svg>
