@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Here our page has a meta description that describes its content.">
+  <link rel="stylesheet" href="./css/normalize-new.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="./assets/favicon16x16.png">
+  <title>Coffee House</title>
+</head>
+
+<body>
+  <header class="header container">
+    <a class="header__logo-link logo" href="./">
+      <img src="./assets/svg/logo-icon.svg" alt="Логотип Coffee House" width="100" height="60">
+      <!-- <svg class="logo__icon" width="100" height="60" aria-hidden="true" focusable="false">
+        <use xlink:href="./assets/svg/stack.svg#logo-icon"></use>
+      </svg> -->
+    </a>
+    <nav class="header__navigation navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#favorite-coffee">Favorite coffee</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#about">About</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#mobile-app">Mobile app</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#contacts">Contact us</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="header__menu-link menu-link" href="./menu.html">
+      <span class="menu-link__text">Menu</span>
+      <svg class="menu-link__icon" width="20" height="20" aria-hidden="true" focusable="false">
+        <use xlink:href="./assets/svg/stack.svg#coffee-cup-icon"></use>
+      </svg>
+    </a>
+  </header>
+  <main>
+    <section class="hero container">
+      <div class="hero__wrapper">
+        <h1 class="visually-hidden">Get to know our cafe</h1>
+        <p class="hero__slogan"><span class="hero__slogan-accent">Enjoy</span> premium coffee at our charming cafe</p>
+        <p class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a
+          popular destination
+          for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+        <a class="hero__link" href="./menu.html">
+          <span class="hero__link-text">Menu</span>
+          <svg class="hero__link-icon" width="20" height="20" aria-hidden="true" focusable="false">
+            <use xlink:href="./assets/svg/stack.svg#coffee-cup-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <section class="favorite-coffee container" id="favorite-coffee">
+      <h2 class="favorite-coffee__title">Choose your <span class="favorite-coffee__title-accent">favorite</span> coffee
+      </h2>
+      <div class="favorite-coffee__slider slider">
+        <div class="slider__buttons-wrapper">
+          <button class="slider__button slider__button--prev">
+            <svg class="slider__coffee-arrow-left-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="./assets/svg/stack.svg#favorite-coffee-arrow-left-icon"></use>
+            </svg>
+          </button>
+          <button class="slider__button slider__button--next">
+            <svg class="slider__coffee-arrow-right-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="./assets/svg/stack.svg#favorite-coffee-arrow-right-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="slider__content-wrapper">
+          <img class="slider__img" src="./assets/index/favorite-coffee/favorite-coffee-slider-1@1x.png" alt="">
+          <h3 class="slider__product-title">S’mores Frappuccino</h3>
+          <p class="slider__product-description">This new drink takes an espresso and mixes it with brown sugar and
+            cinnamon before being topped with oat
+            milk.</p>
+          <p class="slider__product-price">$<span class="slider__product-price-count">5.50</span></p>
+        </div>
+        <ul class="slider__pagination-list">
+          <li class="slider__pagination-item slider__pagination-item--active">
+            <span class="slider__pagination-animation"></span>
+          </li>
+          <li class="slider__pagination-item">
+            <span class="slider__pagination-animation"></span>
+          </li>
+          <li class="slider__pagination-item">
+            <span class="slider__pagination-animation"></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="about container" id="about">
+      <h2 class="visually-hidden">About us</h2>
+      <p class="about__text">Resource is <span class="about__text--accent">the perfect and cozy place</span> where you
+        can enjoy a variety of hot beverages, relax,
+        catch up with friends, or get some work done.</p>
+      <div class="about__gallery">
+        <div class="about__gallery-left-side">
+          <div class="about__gallery-img-wrapper">
+            <img class="about__gallery-img" src="./assets/index/about/about-1@1x.jpg"
+              alt="Улыбающаяся девушка пьет кофе в Coffee House" width="660" height="590">
+          </div>
+          <div class="about__gallery-img-wrapper">
+            <img class="about__gallery-img" src="./assets/index/about/about-2@1x.jpg"
+              alt="Чашка кофе и украшенный гирляндой стол в Coffee House" width="660" height="430">
+          </div>
+        </div>
+        <div class="about__gallery-right-side">
+          <div class="about__gallery-img-wrapper">
+            <img class="about__gallery-img" src="./assets/index/about/about-3@1x.jpg"
+              alt="Мужчина за ноутбуком пьет кофе в Coffee House" width="660" height="430">
+          </div>
+          <div class="about__gallery-img-wrapper">
+            <img class="about__gallery-img" src="./assets/index/about/about-4@1x.jpg"
+              alt="Влюбленная пара обнимается и пьет кофе в Coffee House" width="660" height="590">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mobile-app container" id="mobile-app">
+      <h2 class="visually-hidden">Our mobile apps</h2>
+      <div class="mobile-app__content-wrapper">
+        <p class="mobile-app__promo-title"><span class="mobile-app__promo-title-accent">Download</span> our apps to
+          start ordering</p>
+        <p class="mobile-app__promo-text">Download the Resource app today and experience the comfort of ordering your
+          favorite coffee from wherever you
+          are</p>
+        <div class="mobile-app__links-wrapper">
+          <a class="mobile-app__link" href="#">
+            <svg class="mobile-app__apple-icon" width="36" height="36" aria-hidden="true" focusable="false">
+              <use xlink:href="./assets/svg/stack.svg#mobile-app-apple-icon"></use>
+            </svg>
+            <div>
+              <p class="mobile-app__link-text">Available on the</p>
+              <span class="mobile-app__link-store">App Store</span>
+            </div>
+          </a>
+          <a class="mobile-app__link" href="#">
+            <svg class="mobile-app__google-icon" width="36" height="36" aria-hidden="true" focusable="false">
+              <use xlink:href="./assets/svg/stack.svg#mobile-app-google-play-icon"></use>
+            </svg>
+            <div>
+              <p class="mobile-app__link-text">Available on</p>
+              <span class="mobile-app__link-store">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <img class="mobile-app__img" src="./assets/index/mobile-app/mobile-app-screens@1x.png"
+        alt="Два экрана iPhone на которых открыто приложение Coffee House" width="630" height="630">
+    </section>
+  </main>
+  <footer class="footer container">
+    <section class="contacts" id="contacts">
+      <div class="contacts__social-media">
+        <p class="contacts__text">Sip, Savor, Smile. <span class="contacts__text-accent">It’s coffee time!</span></p>
+        <ul class="contacts__social-list">
+          <li class="contacts__social-item">
+            <span class="visually-hidden">Go to Twitter.</span>
+            <a class="contacts__social-link" href="#">
+              <svg class="contacts__social-twitter-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="./assets/svg/stack.svg#contacts-twitter-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__social-item">
+            <span class="visually-hidden">Go to Instagram.</span>
+            <a class="contacts__social-link" href="#">
+              <svg class="contacts__social-instagram-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="./assets/svg/stack.svg#contacts-instagram-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__social-item">
+            <span class="visually-hidden">Go to Facebook.</span>
+            <a class="contacts__social-link" href="#">
+              <svg class="contacts__social-facebook-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="./assets/svg/stack.svg#contacts-facebook-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__meta">
+        <h2 class="contacts__title">Contact us</h2>
+        <ul class="contacts__meta-list">
+          <li class="contacts__meta-item">
+            <address class="contacts__address">
+              <a class="contacts__address-map-link"
+                href="https://www.google.com/maps/place/8558+Green+Rd,+Pinon+Hills,+CA+92372,+%D0%A1%D0%A8%D0%90/@33.9943673,-118.4198132,17z/data=!4m2!3m1!1s0x80c31419692917f7:0xbaebe5acc965da60"
+                target="_blank">
+                <svg class="contacts__pin-alt-icon" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use xlink:href="./assets/svg/stack.svg#contacts-pin-alt-icon"></use>
+                </svg>
+                <span>8558 Green Rd., LA</span>
+              </a>
+            </address>
+          </li>
+          <li class="contacts__meta-item">
+            <a class="contacts__phone-link" href="tel:+1603555-0123">
+              <svg class="contacts__phone-icon" width="20" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="./assets/svg/stack.svg#contacts-phone-icon"></use>
+              </svg>
+              <span>+1 (603) 555-0123</span>
+            </a>
+          </li>
+          <li class="contacts__meta-item">
+            <svg class="contacts__clock-icon" width="20" height="20" aria-hidden="true" focusable="false">
+              <use xlink:href="./assets/svg/stack.svg#contacts-clock-icon"></use>
+            </svg>
+            <p class="contacts__schedule">Mon-Sat: <time datetime="09:00">9:00 AM</time> – <time datetime="23:00">23:00
+                PM</time></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>
