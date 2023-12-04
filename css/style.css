@@ -83,6 +83,7 @@ a {
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -106,10 +107,12 @@ a {
 
 .header__navigation-wrapper {
   display: flex;
+  flex-grow: 1;
 }
 
 .navigation {
-  width: 1188px;
+  width: 100%;
+  max-width: 1188px;
 }
 
 .navigation__list {
@@ -236,7 +239,10 @@ body.open .hamburger__line:nth-child(2) {
 }
 
 .hero__wrapper {
-  padding: 100px;
+  padding-top: 101px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px;
   background-image: url('./../assets/index/hero/hero-desktop-cover@1x.jpg');
   background-size: cover;
   background-position: center;
@@ -312,11 +318,13 @@ body.open .hamburger__line:nth-child(2) {
 
 .slider__buttons-wrapper {
   position: absolute;
+  top: 47%;
+  left: 50%;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1360px;
-  top: 43%;
+  max-width: 1350px;
+  transform: translate(-50%, -50%);
 }
 
 .slider__button {
@@ -564,7 +572,8 @@ body.open .hamburger__line:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 530px;
+  width: 100%;
+  max-width: 530px;
 }
 
 .contacts__title {
@@ -592,6 +601,7 @@ body.open .hamburger__line:nth-child(2) {
 
 .contacts__address-map-link {
   position: relative;
+  display: flex;
   font-weight: 600;
   color: var(--text-light);
   transition: opacity .3s ease-out;
@@ -613,9 +623,21 @@ body.open .hamburger__line:nth-child(2) {
 .contacts__address-map-link:active {
   opacity: 0.5;
 }
+
 .contacts__address-map-link:focus {
   opacity: 0.5;
 }
+
+.contacts__address-map-link svg {
+  margin-right: 8px;
+}
+
+.contacts__address-map-link pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: inherit;
+}
+
 
 .contacts__pin-alt-icon {
   margin-right: 4px;
@@ -802,6 +824,11 @@ body.open .hamburger__line:nth-child(2) {
 
 /* tablet 1024 */
 @media (max-width: 1024px) {
+  .hero__wrapper {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
   .about__gallery {
     flex-direction: column;
     align-items: center;
@@ -877,11 +904,6 @@ body.open .hamburger__line:nth-child(2) {
 
   .hamburger {
     display: block;
-  }
-
-  .hero__wrapper {
-    padding-right: 60px;
-    padding-left: 60px;
   }
 
   .hero__link-text {
