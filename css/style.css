@@ -234,8 +234,25 @@ body.open .hamburger__line:nth-child(2) {
 }
 
 .hero {
+  overflow:hidden;
+  position: relative;
   margin-bottom: 100px;
   color: var(--text-light);
+}
+
+.hero__video {
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 80px);
+  height: 100%;
+  background-image: url('./../assets/index/hero/hero-desktop-cover@1x.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  transform: translate(-50%, -50%);
 }
 
 .hero__wrapper {
@@ -243,10 +260,6 @@ body.open .hamburger__line:nth-child(2) {
   padding-right: 100px;
   padding-bottom: 100px;
   padding-left: 100px;
-  background-image: url('./../assets/index/hero/hero-desktop-cover@1x.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 40px;
 }
 
 .hero__slogan {
@@ -347,11 +360,66 @@ body.open .hamburger__line:nth-child(2) {
 }
 
 .slider__content-wrapper {
+  position: relative;
   width: 100%;
   max-width: 480px;
   margin-right: auto;
   margin-bottom: 40px;
   margin-left: auto;
+  overflow: hidden;
+}
+
+.slider__item {
+  display: none;
+  position: relative;
+  animation: .5s ease-out;
+}
+
+.slider__item--active,
+.slider__item--next {
+  display: block;
+}
+
+.slider__item--next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 .slider__img {
@@ -392,8 +460,25 @@ body.open .hamburger__line:nth-child(2) {
   border-radius: 100px;
 }
 
-.slider__pagination-item--active {
+.slider__pagination-line {
+  display: block;
+  width: 0;
+  height: 4px;
   background-color: var(--border-dark);
+  border-radius: 100px;
+}
+
+.slider__pagination-item--active .slider__pagination-line {
+  animation: pagination 3s linear;
+}
+
+@keyframes pagination {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
 }
 
 .about {
@@ -981,6 +1066,10 @@ body.open .hamburger__line:nth-child(2) {
   .header__navigation-wrapper {
     min-height: 825px;
     padding-top: 42%;
+  }
+
+  .hero__video {
+    width: calc(100% - 32px);
   }
 
   .hero__wrapper {

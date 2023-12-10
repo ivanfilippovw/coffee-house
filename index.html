@@ -50,6 +50,9 @@
     </header>
     <main>
       <section class="hero container">
+        <video class="hero__video" autoplay muted loop>
+          <source src="./assets/index/hero/hero-video.mp4" type="vide/mp4">
+        </video>
         <div class="hero__wrapper">
           <h1 class="visually-hidden">Get to know our cafe</h1>
           <p class="hero__slogan"><span class="hero__slogan-accent">Enjoy</span> premium coffee at our charming cafe</p>
@@ -72,33 +75,56 @@
         <div class="favorite-coffee__slider slider">
           <div class="slider__buttons-wrapper">
             <button class="slider__button slider__button--prev">
-              <svg class="slider__coffee-arrow-left-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                <use xlink:href="./assets/svg/stack.svg#favorite-coffee-arrow-left-icon"></use>
+              <svg class="slider__coffee-arrow-left-icon" width="24" height="24" aria-hidden="true">
+                <use class="slider__icon" xlink:href="./assets/svg/stack.svg#favorite-coffee-arrow-left-icon"></use>
               </svg>
             </button>
             <button class="slider__button slider__button--next">
-              <svg class="slider__coffee-arrow-right-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                <use xlink:href="./assets/svg/stack.svg#favorite-coffee-arrow-right-icon"></use>
+              <svg class="slider__coffee-arrow-right-icon" width="24" height="24" aria-hidden="true">
+                <use class="slider__icon" xlink:href="./assets/svg/stack.svg#favorite-coffee-arrow-right-icon"></use>
               </svg>
             </button>
           </div>
           <div class="slider__content-wrapper">
-            <img class="slider__img" src="./assets/index/favorite-coffee/favorite-coffee-slider-1@1x.png" alt="">
-            <h3 class="slider__product-title">S’mores Frappuccino</h3>
-            <p class="slider__product-description">This new drink takes an espresso and mixes it with brown sugar and
-              cinnamon before being topped with oat
-              milk.</p>
-            <p class="slider__product-price">$<span class="slider__product-price-count">5.50</span></p>
+            <div class="slider__item slider__item--active">
+              <div class="slider__meta">
+                <img class="slider__img" src="./assets/index/favorite-coffee/favorite-coffee-slider-1@1x.png" alt="">
+                <h3 class="slider__product-title">S’mores Frappuccino</h3>
+                <p class="slider__product-description">This new drink takes an espresso and mixes it with brown sugar
+                  and
+                  cinnamon before being topped with oat
+                  milk.</p>
+                <p class="slider__product-price">$<span class="slider__product-price-count">5.50</span></p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__meta">
+                <img class="slider__img" src="./assets/index/favorite-coffee/favorite-coffee-slider-2@1x.png" alt="">
+                <h3 class="slider__product-title">Caramel Macchiato</h3>
+                <p class="slider__product-description">Fragrant and unique classic espresso with rich caramel-peanut
+                  syrup, with cream under whipped thick foam.</p>
+                <p class="slider__product-price">$<span class="slider__product-price-count">5.00</span></p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__meta">
+                <img class="slider__img" src="./assets/index/favorite-coffee/favorite-coffee-slider-3@1x.png" alt="">
+                <h3 class="slider__product-title">Ice coffee</h3>
+                <p class="slider__product-description">A popular summer drink that tones and invigorates. Prepared from
+                  coffee, milk and ice.</p>
+                <p class="slider__product-price">$<span class="slider__product-price-count">4.50</span></p>
+              </div>
+            </div>
           </div>
           <ul class="slider__pagination-list">
             <li class="slider__pagination-item slider__pagination-item--active">
-              <span class="slider__pagination-animation"></span>
+              <span class="slider__pagination-line slider__pagination-line--animation"></span>
             </li>
             <li class="slider__pagination-item">
-              <span class="slider__pagination-animation"></span>
+              <span class="slider__pagination-line"></span>
             </li>
             <li class="slider__pagination-item">
-              <span class="slider__pagination-animation"></span>
+              <span class="slider__pagination-line"></span>
             </li>
           </ul>
         </div>
@@ -234,7 +260,7 @@
       </section>
     </footer>
   </div>
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>
