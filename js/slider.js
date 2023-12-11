@@ -161,7 +161,7 @@ const swipeDetect = (trackElement) => {
 
     if (elapsedTime <= ALLOWED_TIME) {
       if (Math.abs(distY) > RESTRAINT) {
-        window.scrollBy({ top: -distY, behavior: 'smooth' });
+        window.scrollBy({ top: (-distY * 2), behavior: 'smooth' });
       }
       if (Math.abs(distX) >= THRESHOLD && Math.abs(distY) <= RESTRAINT) {
         if (distX > 0) {

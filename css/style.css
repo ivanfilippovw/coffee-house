@@ -819,6 +819,14 @@ body.open .hamburger__line:nth-child(2) {
 }
 
 .menu__navigation-icon-wrapper {
+  pointer-events: none;
+}
+
+.menu__navigation-icon {
+  pointer-events: none;
+}
+
+.menu__navigation-icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1049,6 +1057,10 @@ body.open .hamburger__line:nth-child(2) {
     background-repeat: no-repeat;
     background-position: center;
     transition: background-color .3s ease-out, stroke .3s ease-out;
+  }
+
+  .menu__button.hidden {
+    display: none;
   }
 
   .menu__button-icon {

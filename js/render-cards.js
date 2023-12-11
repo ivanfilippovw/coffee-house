@@ -1,5 +1,10 @@
+const CARDS_COUNT_SHOW = 4;
+let cardsCountShown = 0;
+
 // Находим шаблон карточки и в шаблоне находим нужный элемент
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
+
+const loaderCardsElement = document.querySelector('.menu__button');
 
 // Функция создания (клонирования) одной карточки по шаблону
 const createCard = ({ name, description, price, category }, index) => {
@@ -26,6 +31,9 @@ const createCard = ({ name, description, price, category }, index) => {
 
 // Функция создания фрагмента, наполнения фрагмента карточками и добавления наполненного фрагмента в элемент-контейнер
 const renderCards = (data, container, categoryParam = 'coffee') => {
+  cardsCountShown = 0;
+  cardsCountShown += CARDS_COUNT_SHOW;
+
   const cardsToRemove = document.querySelectorAll('.card');
   cardsToRemove.forEach((card) => {
     card.remove();
@@ -41,8 +49,43 @@ const renderCards = (data, container, categoryParam = 'coffee') => {
     }
   });
 
+  const fragmentLength = fragment.childNodes.length;
+  console.log(fragmentLength);
+
+  fragment.childNodes.forEach((node, index) => {
+    if (index >= cardsCountShown) {
+      node.classList.add('card--hidden');
+    }
+  });
+
+  if (cardsCountShown >= fragmentLength) {
+    loaderCardsElement.classList.add('hidden');
+    cardsCountShown = fragmentLength;
+  } else {
+    loaderCardsElement.classList.remove('hidden');
+  }
+
   container.append(fragment);
-  console.log('Карты сгенерировались заново');
+  console.log('Карточки сгенерировались заново');
+  console.log(`Показано карточек: ${cardsCountShown}`);
 };
+
+const loadCards = () => {
+  const allCards = document.querySelectorAll('.card')
+  allCards.forEach(card => {
+    if (card.classList.contains('card--hidden')) {
+      card.classList.remove('card--hidden');
+    }
+  });
+  loaderCardsElement.classList.add('hidden');
+  cardsCountShown += 4;
+  console.log(`Показано карточек: ${cardsCountShown}`);
+};
+
+const onLoaderCardsElementClick = () => {
+  loadCards();
+};
+
+loaderCardsElement.addEventListener('click', onLoaderCardsElementClick)
 
 export { renderCards };
