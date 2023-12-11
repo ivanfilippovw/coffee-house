@@ -1,15 +1,15 @@
-const AUTO_SCROLL_TIME = 3000;
+const AUTO_SCROLL_TIME = 5000;
 
 const sliderContainer = document.querySelector('.slider')
 const sliderElements = sliderContainer.querySelectorAll('.slider__item');
 const leftButtonSliderElement = sliderContainer.querySelector('.slider__button--prev');
 const rightButtonSliderElement = sliderContainer.querySelector('.slider__button--next');
-const sliderPaginationElements = sliderContainer.querySelectorAll('.slider__pagination-item')
+const sliderPaginationItemElements = sliderContainer.querySelectorAll('.slider__pagination-item')
+const sliderPaginationLineElements = sliderContainer.querySelectorAll('.slider__pagination-line');
 
 let currentSliderElement = 0;
 let isEnabled = true;
-let autoScrollIntervalId; // Переменная для хранения идентификатора интервала
-let isPaused = false;
+// let currentPaginationLineNumber = 0;
 
 function changeCurrentSliderElement(scrollIndex) {
   currentSliderElement = (scrollIndex + sliderElements.length) % sliderElements.length;
@@ -32,44 +32,35 @@ function showSliderElement(direction) {
   });
 }
 
-function automaticSliderUpdate() {
-  if (isEnabled) {
-    autoScrollIntervalId = setInterval(() => nextSliderElement(currentSliderElement), AUTO_SCROLL_TIME)
-  }
-}
-
 function shadePaginationLine() {
-  sliderPaginationElements[currentSliderElement].classList.add('slider__pagination-item--active');
+  sliderPaginationItemElements[currentSliderElement].classList.add('slider__pagination-item--active');
 }
 
 function stopShadePaginationLine() {
-  sliderPaginationElements[currentSliderElement].classList.remove('slider__pagination-item--active');
+  sliderPaginationItemElements[currentSliderElement].classList.remove('slider__pagination-item--active');
 }
 
 function previousSliderElement(scrollIndex) {
+  // currentPaginationLineNumber--;
   stopShadePaginationLine();
   hideSliderElement('to-right');
   changeCurrentSliderElement(scrollIndex - 1);
   showSliderElement('from-left');
   shadePaginationLine();
-  // Сбрасываем интервал, если он был установлен
-  if (autoScrollIntervalId) {
-    clearInterval(autoScrollIntervalId);
-    autoScrollIntervalId = setInterval(() => nextSliderElement(currentSliderElement), AUTO_SCROLL_TIME)
-  }
 }
 
 function nextSliderElement(scrollIndex) {
+  // console.log("NEXT", currentPaginationLineNumber);
+  // if (currentPaginationLineNumber < 2) {
+  //   currentPaginationLineNumber++;
+  // } else {
+  //   currentPaginationLineNumber = 0;
+  // }
   stopShadePaginationLine();
   hideSliderElement('to-left');
   changeCurrentSliderElement(scrollIndex + 1);
   showSliderElement('from-right');
   shadePaginationLine();
-  // Сбрасываем интервал, если он был установлен
-  if (autoScrollIntervalId) {
-    clearInterval(autoScrollIntervalId);
-    autoScrollIntervalId = setInterval(() => nextSliderElement(currentSliderElement), AUTO_SCROLL_TIME)
-  }
 }
 
 const sliderButtonsActivation = () => {
@@ -169,6 +160,9 @@ const swipeDetect = (trackElement) => {
     elapsedTime = new Date().getTime() - startTime;
 
     if (elapsedTime <= ALLOWED_TIME) {
+      if (Math.abs(distY) > RESTRAINT) {
+        window.scrollBy({ top: -distY, behavior: 'smooth' });
+      }
       if (Math.abs(distX) >= THRESHOLD && Math.abs(distY) <= RESTRAINT) {
         if (distX > 0) {
           if (isEnabled) {
@@ -184,49 +178,37 @@ const swipeDetect = (trackElement) => {
   });
 };
 
-let pauseTime = 0; // Переменная для хранения времени паузы
-let resumeTime = 0; // Переменная для хранения времени возобновления
-let elapsedPauseTime = 0; // Переменная для хранения времени паузы
+const handleAnimationEnd = () => {
+  nextSliderElement(currentSliderElement);
+};
 
+sliderPaginationLineElements.forEach((line) => {
+  line.addEventListener("animationend", handleAnimationEnd);
+});
+// currentSliderElement
 function pauseShadePaginationLine() {
-  let activeLine = document.querySelector('.slider__pagination-item--active .slider__pagination-line');
+  let activeLine = sliderPaginationLineElements[currentSliderElement];
   activeLine.style.animationPlayState = 'paused';
-  if (autoScrollIntervalId && !isPaused) {
-    clearInterval(autoScrollIntervalId);
-    isPaused = true;
-    pauseTime = new Date().getTime(); // Сохраняем время паузы
-    autoScrollIntervalId = null;
-  }
 }
 
 function resumeShadePaginationLine() {
-  // savedResumeTime = new Date().getTime();
-  // let elapsedTime = savedResumeTime - savedPauseTime;
-  let activeLine = document.querySelector('.slider__pagination-line');
+  let activeLine = sliderPaginationLineElements[currentSliderElement];
   activeLine.style.animationPlayState = 'running';
-  if (!autoScrollIntervalId && isPaused) {
-    resumeTime = new Date().getTime(); // Получаем текущее время
-    elapsedPauseTime = resumeTime - pauseTime; // Вычисляем пройденное время с момента паузы
-
-    autoScrollIntervalId = setInterval(() => nextSliderElement(currentSliderElement), AUTO_SCROLL_TIME - elapsedPauseTime);
-    isPaused = false;
-  }
 }
 
+sliderElements.forEach((item) => {
+  item.addEventListener('mouseover', pauseShadePaginationLine);
+  item.addEventListener('mouseout', resumeShadePaginationLine);
+});
 
-
-// Добавляем обработчики событий для элемента карусели при наведении и уходе курсора мыши
-document.querySelector('.slider__item').addEventListener('mouseover', pauseShadePaginationLine);
-document.querySelector('.slider__item').addEventListener('mouseout', resumeShadePaginationLine);
-
-// Добавляем обработчики событий для касания элемента карусели
-document.querySelector('.slider__item').addEventListener('touchstart', pauseShadePaginationLine);
-document.querySelector('.slider__item').addEventListener('touchend', resumeShadePaginationLine);
+sliderElements.forEach((item) => {
+  item.addEventListener('touchstart', pauseShadePaginationLine);
+  item.addEventListener('touchend', resumeShadePaginationLine);
+});
 
 const sliderActivation = () => {
   sliderButtonsActivation();
   swipeDetect(sliderContainer);
-  automaticSliderUpdate();
 };
 
 export { sliderActivation };

@@ -26,3 +26,7 @@ document.querySelectorAll('.navigation__link').forEach(link => {
     document.querySelector('.page__body').classList.remove('open');
   });
 });
+
+document.querySelector('.menu-link').addEventListener('click', () => {
+  document.querySelector('.page__body').classList.remove('open');
+});

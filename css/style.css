@@ -469,7 +469,7 @@ body.open .hamburger__line:nth-child(2) {
 }
 
 .slider__pagination-item--active .slider__pagination-line {
-  animation: pagination 3s linear;
+  animation: pagination 5s linear;
 }
 
 @keyframes pagination {
@@ -1088,6 +1088,10 @@ body.open .hamburger__line:nth-child(2) {
 
   .slider__buttons-wrapper {
     display: none;
+  }
+
+  .slider__content-wrapper {
+    max-width: 348px;
   }
 
   .about__text {
