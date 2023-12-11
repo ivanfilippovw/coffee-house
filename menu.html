@@ -53,7 +53,7 @@
       <p class="menu__text">Behind each of our cups hides an <span class="menu__text-accent">amazing surprise</span></p>
       <ul class="menu__navigation-list">
         <li class="menu__navigation-item">
-          <button class="menu__navigation-button menu__navigation-button--current" type="button">
+          <button class="menu__navigation-button menu__navigation-button--current" id="filter-coffee" type="button">
             <span class="menu__navigation-icon-wrapper">
               <img class="menu__navigation-icon" src="./assets/menu/general/menu-coffee-icon@1x.png"
                 alt="Иконка чашки кофе">
@@ -62,7 +62,7 @@
           </button>
         </li>
         <li class="menu__navigation-item">
-          <button class="menu__navigation-button" type="button">
+          <button class="menu__navigation-button" id="filter-tea" type="button">
             <span class="menu__navigation-icon-wrapper">
               <img class="menu__navigation-icon" src="./assets/menu/general/menu-kettle-icon@1x.png"
                 alt="Иконка чайника">
@@ -71,7 +71,7 @@
           </button>
         </li>
         <li class="menu__navigation-item">
-          <button class="menu__navigation-button" type="button">
+          <button class="menu__navigation-button" id="filter-dessert" type="button">
             <span class="menu__navigation-icon-wrapper">
               <img class="menu__navigation-icon" src="./assets/menu/general/menu-dessert-icon@1x.png"
                 alt="Иконка куска торта">
@@ -240,7 +240,7 @@
   </div>
 
   <template id="card">
-    <li class="menu__card card" data-card-id>
+    <li class="menu__card card" data-card-id data-card-category>
       <div class="card__img-wrapper">
         <img class="card__img" src="./assets/menu/coffee/coffee-1@1x.jpg" alt="">
       </div>
@@ -252,7 +252,6 @@
     </li>
   </template>
 
-  <script src="./js/main.js" type="module"></script>
   <script src="./js/menu.js" type="module"></script>
 </body>
 
