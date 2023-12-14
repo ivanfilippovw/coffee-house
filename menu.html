@@ -14,6 +14,7 @@
 </head>
 
 <body class="page__body">
+  <!-- modal-open -->
   <div class="body-wrapper">
     <header class="header container">
       <a class="header__logo-link logo" href="./index.html">
@@ -169,6 +170,84 @@
           <use xlink:href="./assets/svg/stack.svg#menu-refresh-button-icon"></use>
         </svg>
       </button>
+      <section class="menu__modal modal overlay hidden">
+        <h2 class="modal__title visually-hidden">Карточка настроек и выбора товара</h2>
+        <div class="modal__preview">
+          <div class="modal__img-wrapper">
+            <img class="modal__img" src="./assets/menu/coffee/coffee-1@1x.jpg" alt="">
+          </div>
+          <div class="modal__meta">
+            <h3 class="modal__title">Irish coffee</h3>
+            <p class="modal__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+            <form class="modal__form" action="menu.html" method="get" autocomplete="off">
+              <fieldset class="modal__form-group">
+                <legend class="modal__form-group-title">Size</legend>
+                <ul class="modal__form-group-list">
+                  <li class="modal__form-group-item">
+                    <input class="modal__form-group-input" id="size-s" type="radio" name="size" value="0.00" checked>
+                    <label class="modal__form-group-label" for="size-s">
+                      <span class="modal__form-group-size">S</span>
+                      <span class="modal__form-group-volume">200 ml</span>
+                    </label>
+                  </li>
+                  <li class="modal__form-group-item">
+                    <input class="modal__form-group-input" id="size-m" type="radio" name="size" value="0.50">
+                    <label class="modal__form-group-label" for="size-m">
+                      <span class="modal__form-group-size">M</span>
+                      <span class="modal__form-group-volume">300 ml</span>
+                    </label>
+                  </li>
+                  <li class="modal__form-group-item">
+                    <input class="modal__form-group-input" id="size-l" type="radio" name="size" value="1.00">
+                    <label class="modal__form-group-label" for="size-l">
+                      <span class="modal__form-group-size">L</span>
+                      <span class="modal__form-group-volume">400 ml</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="modal__form-group">
+                <legend class="modal__form-group-title">Additives</legend>
+                <ul class="modal__form-group-list">
+                  <li class="modal__form-group-item">
+                    <input class="modal__form-group-input" id="sugar" type="checkbox" name="additives" value="0.50">
+                    <label class="modal__form-group-label" for="sugar">
+                      <span class="modal__form-group-number">1</span>
+                      <span class="modal__form-group-additive">Sugar</span>
+                    </label>
+                  </li>
+                  <li class="modal__form-group-item">
+                    <input class="modal__form-group-input" id="cinnamon" type="checkbox" name="additives" value="0.50">
+                    <label class="modal__form-group-label" for="cinnamon">
+                      <span class="modal__form-group-number">2</span>
+                      <span class="modal__form-group-additive">Cinnamon</span>
+                    </label>
+                  </li>
+                  <li class="modal__form-group-item">
+                    <input class="modal__form-group-input" id="syrup" type="checkbox" name="additives" value="0.50">
+                    <label class="modal__form-group-label" for="syrup">
+                      <span class="modal__form-group-number">3</span>
+                      <span class="modal__form-group-additive">Syrup</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+            <div class="modal__price-wrapper">
+              <span class="modal__price-text">Total:</span>
+              <p class="modal__price">$<span class="modal__price-count">7.00</span></p>
+            </div>
+            <div class="modal__disclaimer">
+              <img class="modal__disclaimer-icon" src="./assets/svg/menu-disclaimer-icon.svg"
+                alt="Exclamation mark icon">
+              <p class="modal__disclaimer-text">The cost is not final. Download our mobile app to see the final price
+                and place your order. Earn
+                loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+            </div>
+            <button class="modal__close-button" type="button">Close</button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer container">
       <section class="contacts" id="contacts">
@@ -238,7 +317,6 @@
       </section>
     </footer>
   </div>
-
   <template id="card">
     <li class="menu__card card" data-card-id data-card-category>
       <div class="card__img-wrapper">
@@ -251,7 +329,6 @@
       </div>
     </li>
   </template>
-
   <script src="./js/menu.js" type="module"></script>
 </body>
 
