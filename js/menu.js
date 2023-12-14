@@ -1,3 +1,4 @@
+
 import './burger.js';
 import { getData } from './api.js';
 import { renderModal } from './render-modal.js'

@@ -22,6 +22,7 @@ const createCard = ({ name, description, price, category }, index) => {
 
   card.dataset.cardId = cardNumber; // Используем индекс массива как идентификатор
   card.dataset.cardCategory = category;
+  card.dataset.cardPrice = price;
 
   card.querySelector('.card__img').src = `assets/menu/${category}/${category}-${ category === Categories.TEA ? cardNumber -= START_TEA_INDEX :
   category === Categories.DESSERT ? cardNumber -= START_DESSERT_INDEX :
