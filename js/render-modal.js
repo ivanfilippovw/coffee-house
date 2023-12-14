@@ -1,4 +1,5 @@
 import { renderCards } from './render-cards.js';
+import { showModal } from './modal.js';
 
 // Находим элемент-контейнер, куда будем добавлять сгенерированные по шаблону карточки
 const cardsContainer = document.querySelector('.menu__products-list');
@@ -11,20 +12,20 @@ const renderModal = (data) => {
 
   renderCards(data, cardsContainer);
 
-  // thumbnailsContainer.addEventListener('click', (evt) => {
-  //   const thumbnail = evt.target.closest('[data-thumbnail-id]');
+  cardsContainer.addEventListener('click', (evt) => {
+    const card = evt.target.closest('[data-card-id]');
 
-  //   if(!thumbnail) {
-  //     return;
-  //   }
+    if(!card) {
+      return;
+    }
 
-  //   evt.preventDefault();
+    evt.preventDefault();
 
-  //   const thumbnailId = +thumbnail.dataset.thumbnailId;
-  //   const pictureData = pictures.find(({ id }) => id === thumbnailId);
-
-  //   showPicture(pictureData);
-  // });
+    const cardId = +card.dataset.cardId;
+    const cardData = data.find((element, index) => index === (cardId - 1));
+    console.log(cardData)
+    showModal(cardData, cardId);
+  });
 };
 
 export { renderModal };

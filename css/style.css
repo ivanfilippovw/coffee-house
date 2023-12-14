@@ -46,6 +46,17 @@ body {
   color: var(--text-dark);
 }
 
+/* Скрыть только вертикальный скроллбар, но оставить возможность прокрутки */
+body {
+  overflow-y: scroll; /* Всегда показывать вертикальный скроллбар */
+  scrollbar-width: none; /* Скрыть стандартный скроллбар в Firefox */
+}
+
+/* Скрыть стандартный скроллбар в Chrome, Safari и Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -894,7 +905,7 @@ body.open .hamburger__line:nth-child(2) {
 }
 
 .modal-open {
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
 }
 

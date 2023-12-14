@@ -1,3 +1,9 @@
+const Categories = {
+  COFFEE: 'coffee',
+  TEA: 'tea',
+  DESSERT: 'dessert',
+};
+
 const CARDS_COUNT_SHOW = 4;
 let cardsCountShown = 0;
 
@@ -17,8 +23,8 @@ const createCard = ({ name, description, price, category }, index) => {
   card.dataset.cardId = cardNumber; // Используем индекс массива как идентификатор
   card.dataset.cardCategory = category;
 
-  card.querySelector('.card__img').src = `assets/menu/${category}/${category}-${ category === 'tea' ? cardNumber -= START_TEA_INDEX :
-  category === 'dessert' ? cardNumber -= START_DESSERT_INDEX :
+  card.querySelector('.card__img').src = `assets/menu/${category}/${category}-${ category === Categories.TEA ? cardNumber -= START_TEA_INDEX :
+  category === Categories.DESSERT ? cardNumber -= START_DESSERT_INDEX :
   cardNumber}@1x.jpg`;
 
   card.querySelector('.card__img').alt = name;
