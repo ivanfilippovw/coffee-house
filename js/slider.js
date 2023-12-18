@@ -78,7 +78,7 @@ const sliderButtonsActivation = () => {
 const swipeDetect = (trackElement) => {
   const THRESHOLD = 150; // дистанция, ограничение минимальной длинны по X
   const RESTRAINT = 100; // дистанция, ограничение минимальной длинны по Y
-  const ALLOWED_TIME = 300; // ограничитель по времени, за которое нужно успеть отпустить курсор/убрать палец
+  const ALLOWED_TIME = 500; // ограничитель по времени, за которое нужно успеть отпустить курсор/убрать палец
 
   const surface = trackElement;
 

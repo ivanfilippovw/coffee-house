@@ -812,6 +812,7 @@ body.open .hamburger__line:nth-child(2) {
   gap: 8px;
   padding: 8px 16px 8px 8px;
   background-color: var(--background-body);
+  color: var(--text-dark);
   border-radius: 100px;
   border: 1px solid var(--border-light);
   transition: background-color .5s ease-out, color .5s ease-out;
