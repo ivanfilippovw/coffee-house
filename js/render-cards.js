@@ -57,7 +57,6 @@ const renderCards = (data, container, categoryParam = 'coffee') => {
   });
 
   const fragmentLength = fragment.childNodes.length;
-  console.log(fragmentLength);
 
   fragment.childNodes.forEach((node, index) => {
     if (index >= cardsCountShown) {
@@ -73,8 +72,6 @@ const renderCards = (data, container, categoryParam = 'coffee') => {
   }
 
   container.append(fragment);
-  console.log('Карточки сгенерировались заново');
-  console.log(`Показано карточек: ${cardsCountShown}`);
 };
 
 const loadCards = () => {

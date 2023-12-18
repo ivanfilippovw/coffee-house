@@ -23,7 +23,6 @@ const renderModal = (data) => {
 
     const cardId = +card.dataset.cardId;
     const cardData = data.find((element, index) => index === (cardId - 1));
-    console.log(cardData)
     showModal(cardData, cardId);
   });
 };

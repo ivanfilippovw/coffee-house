@@ -44,7 +44,7 @@ const changeFilterElementState = (evt) => {
 const activateFilterButtons = (cards) => {
   const debouncedSortCards = debounce(() => sortCards(cards), RERENDER_DELAY);
   const filterElementClickHandler = (evt) => {
-    changeFilterElementState(evt); // было changeFilterElementState(evt, cards);
+    changeFilterElementState(evt);
     debouncedSortCards();
   };
 
