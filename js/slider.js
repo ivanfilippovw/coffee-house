@@ -1,5 +1,3 @@
-const AUTO_SCROLL_TIME = 5000;
-
 const sliderContainer = document.querySelector('.slider')
 const sliderElements = sliderContainer.querySelectorAll('.slider__item');
 const leftButtonSliderElement = sliderContainer.querySelector('.slider__button--prev');
@@ -185,7 +183,7 @@ const handleAnimationEnd = () => {
 sliderPaginationLineElements.forEach((line) => {
   line.addEventListener("animationend", handleAnimationEnd);
 });
-// currentSliderElement
+
 function pauseShadePaginationLine() {
   let activeLine = sliderPaginationLineElements[currentSliderElement];
   activeLine.style.animationPlayState = 'paused';

@@ -59,13 +59,9 @@ const renderPicture = ({ name, description, price, category }, id) => {
 };
 
 const updatePrice = (data) => {
-  console.log('updatePriceс сработала');
-
   let totalPrice = parseFloat(data.price);
-  console.log(totalPrice);
 
   setTimeout(() => {
-
     const checkedInputs = cardModalBlock.querySelectorAll("input:checked");
 
     for (let i = 0; i < checkedInputs.length; i++) {
@@ -75,7 +71,6 @@ const updatePrice = (data) => {
 
     // Обновляем значение в элементе .modal__price-count
     cardModalPriceElement.textContent = totalPrice.toFixed(2); // Форматируем до двух знаков после запятой
-    console.log(totalPrice);
   }, 1);
 };
 
@@ -89,7 +84,6 @@ const onCardModalBlockOutsideClick = (event) => {
   // Если клик был выполнен вне модального окна, закрываем его
   if (!(cardModalContentBlock.contains(event.target))) {
     hideModal();
-    console.log('клик был выполнен ВНЕ на дочернем элементе')
   }
 };
 
