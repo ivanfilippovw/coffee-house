@@ -105,7 +105,7 @@ a {
   width: 100%;
   max-width: 100px;
   height: 60px;
-  transition: opacity .3s ease-out;
+  transition: opacity .5s ease-out;
 }
 
 .logo:active {
@@ -136,7 +136,7 @@ a {
   position: relative;
   font-weight: 600;
   color: var(--text-dark);
-  transition: opacity .3s ease-out;
+  transition: opacity .5s ease-out;
 }
 
 .navigation__link::after {
@@ -149,7 +149,7 @@ a {
   background-color: var(--text-dark);
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .navigation__link:active {
@@ -167,7 +167,7 @@ a {
   margin-left: auto;
   font-weight: 600;
   color: var(--text-dark);
-  transition: opacity .3s ease-out;
+  transition: opacity .5s ease-out;
 }
 
 .menu-link::after {
@@ -180,7 +180,7 @@ a {
   background-color: var(--text-dark);
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .menu-link:active {
@@ -201,7 +201,7 @@ a {
   background-color: var(--text-dark);
   transform: scaleX(1);
   transform-origin: center;
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .hamburger {
@@ -214,7 +214,7 @@ a {
   background-color: var(--background-body);
   border: 1px solid var(--border-dark);
   border-radius: 50%;
-  transition: background-color .3s ease-out, stroke .3s ease-out;
+  transition: background-color .5s ease-out, stroke .5s ease-out;
 }
 
 .hamburger__line {
@@ -304,11 +304,11 @@ body.open .hamburger__line:nth-child(2) {
   background-color: var(--background-body);
   color: var(--text-dark);
   border-radius: 100px;
-  transition: background-color .3s ease-out;
+  transition: background-color .5s ease-out;
 }
 
 .hero__link-text {
-  transition: transform .3s ease-out,color .3s ease-out;
+  transition: transform .5s ease-out,color .5s ease-out;
 }
 
 .hero__link-icon {
@@ -316,7 +316,7 @@ body.open .hamburger__line:nth-child(2) {
   right: 30%;
   stroke: var(--text-dark);
   opacity: 0;
-  transition: opacity .3s ease-out, stroke .3s ease-out;
+  transition: opacity .5s ease-out, stroke .5s ease-out;
 }
 
 .favorite-coffee {
@@ -362,7 +362,7 @@ body.open .hamburger__line:nth-child(2) {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color .3s ease-out, stroke .3s ease-out;
+  transition: background-color .5s ease-out, stroke .5s ease-out;
 }
 
 .slider__coffee-arrow-left-icon,
@@ -530,7 +530,7 @@ body.open .hamburger__line:nth-child(2) {
 .about__gallery-img {
   object-fit: cover;
   transform: scale(1.1);
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .mobile-app {
@@ -576,13 +576,13 @@ body.open .hamburger__line:nth-child(2) {
   padding: 12px 20px;
   border: 1px solid var(--border-dark);
   border-radius: 100px;
-  transition: background-color .3s ease-out, color 5s ease-out, fill .3s ease-out;
+  transition: background-color .5s ease-out, color 5s ease-out, fill .5s ease-out;
 }
 
 .mobile-app__apple-icon,
 .mobile-app__google-icon {
   fill: var(--text-dark);
-  transition: fill .3s ease-out;
+  transition: fill .5s ease-out;
 }
 
 .mobile-app__link-text {
@@ -591,13 +591,13 @@ body.open .hamburger__line:nth-child(2) {
   font-weight: 600;
   line-height: 1.4;
   color: var(--text-dark);
-  transition: color .3s ease-out;
+  transition: color .5s ease-out;
 }
 
 .mobile-app__link-store {
   font-weight: 600;
   color: var(--text-dark);
-  transition: color .3s ease-out;
+  transition: color .5s ease-out;
 }
 
 .mobile-app__img-wrapper {
@@ -654,12 +654,12 @@ body.open .hamburger__line:nth-child(2) {
   height: 60px;
   border: 1px solid var(--border-light);
   border-radius: 50%;
-  transition: background-color .3s ease-out;
+  transition: background-color .5s ease-out;
 }
 
 .contacts__social-link svg {
   stroke: var(--text-light);
-  transition: stroke .3s ease-out;
+  transition: stroke .5s ease-out;
 }
 
 .contacts__meta {
@@ -698,7 +698,7 @@ body.open .hamburger__line:nth-child(2) {
   display: flex;
   font-weight: 600;
   color: var(--text-light);
-  transition: opacity .3s ease-out;
+  transition: opacity .5s ease-out;
 }
 
 .contacts__address-map-link::after {
@@ -711,7 +711,7 @@ body.open .hamburger__line:nth-child(2) {
   background-color: var(--text-light);
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .contacts__address-map-link:active {
@@ -745,7 +745,7 @@ body.open .hamburger__line:nth-child(2) {
   position: relative;
   font-weight: 600;
   color: var(--text-light);
-  transition: opacity .3s ease-out;
+  transition: opacity .5s ease-out;
 }
 
 .contacts__phone-link::after {
@@ -758,7 +758,7 @@ body.open .hamburger__line:nth-child(2) {
   background-color: var(--text-light);
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .contacts__phone-link:active {
@@ -814,7 +814,7 @@ body.open .hamburger__line:nth-child(2) {
   background-color: var(--background-body);
   border-radius: 100px;
   border: 1px solid var(--border-light);
-  transition: background-color .3s ease-out, color .3s ease-out;
+  transition: background-color .5s ease-out, color .5s ease-out;
 }
 
 .menu__navigation-button--current {
@@ -844,7 +844,7 @@ body.open .hamburger__line:nth-child(2) {
   padding: 3px 7px;
   background-color: var(--border-light);
   border-radius: 50%;
-  transition: background-color .3s ease-out;
+  transition: background-color .5s ease-out;
 }
 
 .menu__products-list {
@@ -873,7 +873,7 @@ body.open .hamburger__line:nth-child(2) {
 .card__img {
   object-fit: cover;
   transform: scale(1.1);
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .card__meta {
@@ -948,7 +948,7 @@ body.open .hamburger__line:nth-child(2) {
 .modal__img {
   object-fit: cover;
   transform: scale(1.1);
-  transition: transform .3s ease-out;
+  transition: transform .5s ease-out;
 }
 
 .modal__title {
@@ -1001,7 +1001,7 @@ body.open .hamburger__line:nth-child(2) {
   background-color: var(--background-body);
   border-radius: 100px;
   border: 1px solid var(--border-light);
-  transition: background-color .3s ease-out, color .3s ease-out;
+  transition: background-color .5s ease-out, color .5s ease-out;
   cursor: pointer;
 }
 
@@ -1019,7 +1019,7 @@ body.open .hamburger__line:nth-child(2) {
   padding: 3px 7px;
   background-color: var(--border-light);
   border-radius: 50%;
-  transition: background-color .3s ease-out;
+  transition: background-color .5s ease-out;
 }
 
 .modal__form-group-input[type="radio"]:checked + .modal__form-group-label .modal__form-group-size {
@@ -1044,7 +1044,7 @@ body.open .hamburger__line:nth-child(2) {
   padding: 3px 7px;
   background-color: var(--border-light);
   border-radius: 50%;
-  transition: background-color .3s ease-out;
+  transition: background-color .5s ease-out;
 }
 
 .modal__form-group-input[type="checkbox"]:checked + .modal__form-group-label .modal__form-group-number {
@@ -1081,20 +1081,16 @@ body.open .hamburger__line:nth-child(2) {
 }
 
 .modal__close-button {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch; */
   width: 100%;
   padding: 9px 78px;
   color: var(--text-dark, #403F3D);
-  /* text-align: center; */
   font-weight: 600;
   background-color: var(--background-body);
   border-radius: 100px;
   border: 1px solid var(--border-dark, #665F55);
-  transition: background-color .3s ease-out, color .3s ease-out;
+  transition: background-color .5s ease-out, color .5s ease-out;
 }
+
 /* tablet 1280 */
 @media (max-width: 1280px) {
   .mobile-app {
@@ -1265,7 +1261,7 @@ body.open .hamburger__line:nth-child(2) {
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-color .3s ease-out, stroke .3s ease-out;
+    transition: background-color .5s ease-out, stroke .5s ease-out;
   }
 
   .menu__button.hidden {
