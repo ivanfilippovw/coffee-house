@@ -863,6 +863,16 @@ body.open .hamburger__line:nth-child(2) {
   border: 1px solid var(--border-light);
   border-radius: 40px;
   cursor: pointer;
+  animation: .5s linear 0s 1 forwards animated;
+}
+
+@keyframes animated {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .card__img-wrapper {
