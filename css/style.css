@@ -863,6 +863,7 @@ body.open .hamburger__line:nth-child(2) {
   overflow: hidden;
   border: 1px solid var(--border-light);
   border-radius: 40px;
+  opacity: 0;
   cursor: pointer;
   animation: .5s linear 0s 1 forwards animated;
 }
